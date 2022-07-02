@@ -30,6 +30,7 @@ namespace custom_notification
         private void InitializeComponent()
         {
             this.checkBoxDocked = new System.Windows.Forms.CheckBox();
+            this.textBoxNewMessage = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // checkBoxDocked
@@ -43,11 +44,20 @@ namespace custom_notification
             this.checkBoxDocked.Text = "Docked";
             this.checkBoxDocked.UseVisualStyleBackColor = true;
             // 
+            // textBoxNewMessage
+            // 
+            this.textBoxNewMessage.Location = new System.Drawing.Point(13, 660);
+            this.textBoxNewMessage.Name = "textBoxNewMessage";
+            this.textBoxNewMessage.PlaceholderText = "New message";
+            this.textBoxNewMessage.Size = new System.Drawing.Size(323, 31);
+            this.textBoxNewMessage.TabIndex = 1;
+            // 
             // CustomNotificationContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 744);
+            this.Controls.Add(this.textBoxNewMessage);
             this.Controls.Add(this.checkBoxDocked);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "CustomNotificationContainer";
@@ -61,5 +71,6 @@ namespace custom_notification
         #endregion
 
         private System.Windows.Forms.CheckBox checkBoxDocked;
+        private System.Windows.Forms.TextBox textBoxNewMessage;
     }
 }

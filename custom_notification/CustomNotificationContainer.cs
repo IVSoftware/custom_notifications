@@ -31,6 +31,17 @@ namespace custom_notification
                     Size = _defaultSize;
                 }
             };
+            textBoxNewMessage.KeyDown += (sender, e) =>
+            {
+                switch (e.KeyData)
+                {
+                    case Keys.Enter:
+                        e.SuppressKeyPress = true;
+                        CustomNotification.Show(this, textBoxNewMessage.Text);
+                        textBoxNewMessage.Clear();
+                        break;
+                }
+            };
         }
         private Point _defaultPos;
         private Size _defaultSize;

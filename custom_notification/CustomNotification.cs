@@ -79,25 +79,13 @@ namespace custom_notification
                 labelMessage.ForeColor = Color.White;
             }
         }
-
-        SemaphoreSlim _ssReenter = new SemaphoreSlim(1, 1);
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);
-            if(_ssReenter.Wait(0))
+            if (MouseButtons == MouseButtons.Left)
             {
-                try
-                {
-                    if(MouseButtons == MouseButtons.Left)
-                    {
-                        var delta = Math.Max(0, PointToScreen(e.Location).X - _mouseDownX);
-                        Location = new Point(delta, Location.Y);
-                    }
-                }
-                finally
-                {
-                    _ssReenter.Release();
-                }
+                var delta = Math.Max(0, PointToScreen(e.Location).X - _mouseDownX);
+                Location = new Point(delta, Location.Y);
             }
         }
         private Point _mouseDownLocation;

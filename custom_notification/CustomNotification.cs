@@ -8,7 +8,7 @@ namespace custom_notification
 {
     public partial class CustomNotification : UserControl
     {
-        public CustomNotification(string message)
+        private CustomNotification(string message)
         {
             InitializeComponent();
             labelMessage.Text = message;

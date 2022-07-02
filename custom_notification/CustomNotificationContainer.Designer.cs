@@ -46,6 +46,7 @@ namespace custom_notification
             // 
             // textBoxNewMessage
             // 
+            this.textBoxNewMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.textBoxNewMessage.Location = new System.Drawing.Point(13, 660);
             this.textBoxNewMessage.Name = "textBoxNewMessage";
             this.textBoxNewMessage.PlaceholderText = "New message";
